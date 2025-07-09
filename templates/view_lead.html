@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Lead Detail</title></head>
+<body>
+    <h2>🔍 Lead {{ lead.reference }}</h2>
+    <p><strong>From:</strong> {{ lead.sender_name }} ({{ lead.sender_email }})</p>
+    <p><strong>Subject:</strong> {{ lead.subject }}</p>
+    <p><strong>Summary:</strong> {{ lead.summary }}</p>
+    <p><strong>Urgency:</strong> {{ lead.urgency }}</p>
+    <p><strong>Intent:</strong> {{ lead.intent }}</p>
+    <p><strong>Phone:</strong> {{ lead.phone }}</p>
+    <p><strong>Listing Ref:</strong> {{ lead.listing_ref }}</p>
+    <p><strong>Preferred Date:</strong> {{ lead.preferred_date }}</p>
+    <pre>{{ lead.raw_payload | tojson(indent=2) }}</pre>
+</body>
+</html>

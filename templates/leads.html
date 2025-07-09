@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Leads Inbox</title></head>
+<body>
+    <h2>📥 Leads Inbox</h2>
+    <table border="1">
+        <tr>
+            <th>Reference</th><th>Name</th><th>Email</th><th>Listing</th><th>Urgency</th><th>Received</th>
+        </tr>
+        {% for lead in leads %}
+        <tr>
+            <td><a href="/leads/view/{{ lead.reference }}">{{ lead.reference }}</a></td>
+            <td>{{ lead.sender_name }}</td>
+            <td>{{ lead.sender_email }}</td>
+            <td>{{ lead.listing_ref }}</td>
+            <td>{{ lead.urgency }}</td>
+            <td>{{ lead.timestamp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
