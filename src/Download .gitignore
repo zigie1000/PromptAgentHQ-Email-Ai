@@ -1,0 +1,25 @@
+# 🛡️ Do NOT track secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Node (if any frontend tools get used)
+node_modules/
+
+# Logs
+*.log
+debug.log
+
+# System
+.DS_Store
+
+# VSCode and IDE
+.vscode/
+.idea/
+
+# SQLite and tokens
+*.sqlite3
+token.json
+lead_tracker.db
