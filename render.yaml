@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: promptagent-email-ai
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python src/main.py
+
+cron:
+  - name: check-inbox
+    path: /cron/check
+    schedule: "*/10 * * * *"
